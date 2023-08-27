@@ -47,3 +47,7 @@ The following code has been extracted from the official cheatsheet and is posted
 ```bash
 streamlit run your_script.py
 ```
+```python
+import streamlit as st
+```
+
