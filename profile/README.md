@@ -120,7 +120,8 @@ def summarize_text(text):
 #requirements.txt
 streamlit
 scikit-learn
-transformers '''
+transformers 
+'''
 
 --------------------------------------
 
