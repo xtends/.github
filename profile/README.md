@@ -23,15 +23,13 @@ Utilize the Streamlit functions to create user-friendly interaction.
 
 Step 5: AI Integration
 
-Integrate a basic machine learning model for spam detection.
-Use CountVectorizer and Multinomial Naive Bayes classifier.
-Implement the predict_spam function for spam prediction.
+Integrate a basic machine learning model from your choice of models.
+For instance Use CountVectorizer and Multinomial Naive Bayes classifier to implement the predict_spam function for spam prediction.
 
 Step 6: Language Model Extensions
 
 Utilize the Transformers library to add a text summarization feature.
-Load a pre-trained BART model and tokenizer.
-Implement the summarize_text function for text summarization.
+Implement the summarize_text function for text summarization from BART
 
 Step 7: Security Best Practices
 
@@ -117,10 +115,12 @@ def summarize_text(text):
     summary_ids = model.generate(inputs.input_ids, num_beams=4, min_length=30, max_length=200, early_stopping=True)
     return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
+# requirements example
+'''bash
 #requirements.txt
 streamlit
 scikit-learn
-transformers
+transformers '''
 
 --------------------------------------
 
