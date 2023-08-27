@@ -44,8 +44,6 @@ Configure a web server (Nginx or Apache) to handle requests.
 Start the Streamlit app and make it accessible online.
 The following code has been extracted from the official cheatsheet and is posted here to save time on rapid deployment</a><br />
 
-'''bash
+```bash
 streamlit run your_script.py
-'''
-
-
+```
