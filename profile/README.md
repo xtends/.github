@@ -42,89 +42,10 @@ Choose a deployment platform such as AWS, GCP, or DigitalOcean.
 Prepare your code for deployment by creating a requirements.txt file.
 Configure a web server (Nginx or Apache) to handle requests.
 Start the Streamlit app and make it accessible online.
-The following codebase includes the app.py, modules.py, and requirements.txt files.
+The following code has been extracted from the official cheatsheet and is posted here to save time on rapid deployment</a><br />
 
-##############################################
-#app.py
-from modules import display_hello
-
-def main():
-    display_hello()
-
-if __name__ == "__main__":
-    main()
-
-import streamlit as st
-import re
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-
-# Sanitize Input
-def sanitize_input(text):
-    return re.sub(r'[^\w\s]', '', text)
-
-# Display Hello and UI/UX
-def display_hello():
-    """
-    Display the welcome message and user interaction elements.
-    """
-    st.title("Hello, iApps!")
-    name = sanitize_input(st.text_input("Enter your name", "John Doe"))
-    if st.button("Submit"):
-        st.write(f"Welcome to iApps, {name}!")
-
-    user_input = sanitize_input(st.text_input("Check for spam", "Type here..."))
-    if st.button("Check"):
-        result = predict_spam(user_input)
-        if result == 1:
-            st.write("This looks like spam.")
-        else:
-            st.write("This looks safe.")
-
-    long_text = sanitize_input(st.text_area("Enter text to summarize", "Type here..."))
-    if st.button("Summarize"):
-        summary = summarize_text(long_text)
-        st.write("Summary:", summary)
-
-# Machine Learning Model for Spam Detection
-train_texts = ["spam", "ham", "spam", "ham"]
-train_labels = [1, 0, 1, 0]
-vectorizer = CountVectorizer()
-X_train = vectorizer.fit_transform(train_texts)
-clf = MultinomialNB()
-clf.fit(X_train, train_labels)
-
-def predict_spam(text):
-    """
-    Predict whether a given text is spam or not.
-    """
-    X_test = vectorizer.transform([text])
-    return clf.predict(X_test)[0]
-
-# Text Summarization using Transformers
-tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
-model = AutoModelForSeq2SeqLM.from_pretrained("facebook/bart-large-cnn")
-
-#modules.py
-def summarize_text(text):
-    """
-    Summarize a given text using a pre-trained language model.
-    """
-    inputs = tokenizer([text], max_length=1024, return_tensors="pt")
-    summary_ids = model.generate(inputs.input_ids, num_beams=4, min_length=30, max_length=200, early_stopping=True)
-    return tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-
-# requirements example
 '''bash
-#requirements.txt
-streamlit
-scikit-learn
-transformers 
+streamlit run your_script.py
 '''
-
---------------------------------------
-
-
 
 
