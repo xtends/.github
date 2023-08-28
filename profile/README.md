@@ -732,7 +732,8 @@ if __name__ == "__main__":
     main()
 ```
 
-################ putting it all together ######################
+##### putting it all together #####<br />
+
 <b>module to import a local language model as an app controller</b>
 
 ```python
@@ -849,7 +850,8 @@ if __name__ == "__main__":
     main()
 ```
 
-# <b>integrating streamlit with react</b>
+# <b>integrating streamlit with react</b><br />
+
 ```bash
 npx create-react-app my-streamlit-component
 ```
