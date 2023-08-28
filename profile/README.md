@@ -194,28 +194,28 @@ conn = st.experimental_connection('sql')
 
 1. Custom Language Model Integration<br />
 
-You can create custom components that interface with local language models for tasks like sentiment analysis, translation, and summarization. Use the st.pydeck_chart component to visualize language model outputs interactively.<br />
+You can create custom components that interface with local language models for tasks like sentiment analysis, translation, and summarization. Use the st.pydeck_chart component to visualize language model outputs interactively.<br /><br />
 2. ChatGPT Integration<br />
 
-Integrate the ChatGPT API into your Streamlit app using a custom component. This allows users to have dynamic conversations with AI and obtain context-aware responses in real-time.<br />
+Integrate the ChatGPT API into your Streamlit app using a custom component. This allows users to have dynamic conversations with AI and obtain context-aware responses in real-time.<br /><br />
 3. Database API Integration<br />
 
-Develop a custom component that interfaces with database APIs to fetch and display data seamlessly. This enables users to interact with and manipulate data directly within your app.<br />
+Develop a custom component that interfaces with database APIs to fetch and display data seamlessly. This enables users to interact with and manipulate data directly within your app.<br /><br />
 4. User-Friendly Interfaces
 
-Design user-friendly interfaces for your custom components using intuitive widgets like buttons, sliders, and input fields. Keep the user experience streamlined and accessible.<br />
+Design user-friendly interfaces for your custom components using intuitive widgets like buttons, sliders, and input fields. Keep the user experience streamlined and accessible.<br /><br />
 5. Real-Time Updates<br />
 
-Enable real-time updates in custom components by integrating Streamlit's reactive framework. Ensure that changes in language models, ChatGPT responses, or database updates are reflected instantly.<br />
+Enable real-time updates in custom components by integrating Streamlit's reactive framework. Ensure that changes in language models, ChatGPT responses, or database updates are reflected instantly.<br /><br />
 6. Progressive Loading<br />
 
-Implement progressive loading for language model responses or API queries. Use placeholders and loading spinners to provide feedback while waiting for data to load.<br />
+Implement progressive loading for language model responses or API queries. Use placeholders and loading spinners to provide feedback while waiting for data to load.<br /><br />
 7. Contextual User Interactions<br />
 
-Create custom components that allow users to interact contextually with AI models. For instance, trigger ChatGPT responses based on user actions or clicks.<br />
+Create custom components that allow users to interact contextually with AI models. For instance, trigger ChatGPT responses based on user actions or clicks.<br /><br />
 8. Error Handling<br />
 
-Implement robust error handling in your custom components. Display clear error messages and provide users with guidance on how to proceed when unexpected issues arise.<br />
+Implement robust error handling in your custom components. Display clear error messages and provide users with guidance on how to proceed when unexpected issues arise.<br /><br />
 9. Security Considerations<br />
 
 Prioritize security when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.<br />
