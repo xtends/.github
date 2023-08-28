@@ -1,5 +1,6 @@
 # iApps - from zero to hero<br />
-# FAICE = Framework for Autonomous and Intelligent Computer Expressions</br>
+# FAICE<br />
+<b>Framework for Autonomous and Intelligent Computer Expressions</b></br>
 
 Step 1: Environment Setup
 
