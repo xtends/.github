@@ -3,9 +3,9 @@ Intelligent Agents Python Programming FAICE platform
 
 <b><a href="https://github.com/faicey">FAICE</a> = Framework for Autonomous and Intelligent Computer Expressions</b></br>
 
-<b>iApps = Intelligent Agent Python Programming Software</a></b><br /><br />
+<b>iApps = Intelligent Agent Python Programming Software</a></b><br /><br /><br />
 
-<b>Step 1: Environment Setup</b>
+<b>Step 1: Environment Setup</b><br />
 
 <b>create a python virtual environment</b>
 ```bash
