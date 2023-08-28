@@ -849,6 +849,76 @@ if __name__ == "__main__":
     main()
 ```
 
+<b>diving deeper streamlit and react</a>
+
+npx create-react-app my-streamlit-component
+
+npm install --save streamlit-component-lib
+
+<b>modify /src/iApp.js</b>
+import { Streamlit, withStreamlitConnection } from "streamlit-component-lib";
+import React from "react";
+
+function App() {
+  return (
+    <button
+      onClick={() => Streamlit.setComponentValue("Button clicked")}
+    >
+      Click Me
+    </button>
+  );
+}
+
+export default withStreamlitConnection(App);
+
+<b>build the component</>
+npm run build
+
+
+<b>create the streamlit</a>
+
+#codephreak.py
+import streamlit as st
+import streamlit.components.v1 as components
+
+_my_component = components.declare_component("my_streamlit_component", path="path/to/my-streamlit-component/build")
+
+clicked = _my_component()
+
+if clicked:
+    st.write(f"You clicked the button: {clicked}")
+
+<b>run the iApp</>
+codephreak.py
+<b>inject html and JavaScript into the streamlit iApp</>
+
+import streamlit as st
+
+st.write(
+    """
+    <script>
+    function myFunction() {
+        alert("Hello! Streamlit + JavaScript");
+    }
+    </script>
+    <button onclick="myFunction()">Click Me</button>
+    """,
+    unsafe_allow_html=True,
+)
+
+#############################################
+unsafe_allow_html=True to allow HTML content. The JavaScript function myFunction shows an alert box when the button is clicked.
+
+Security Considerations
+
+    Input Validation and Sanitization: Always sanitize and validate data coming from custom components.
+    Least Privilege Principle: Only use the permissions you need.
+    Secure Communication: If the component interacts with external services, make sure to use HTTPS.
+    Threat Modeling: Understand the data flows and potential areas where sensitive information might be exposed.
+
+
+
+
 
 
 
