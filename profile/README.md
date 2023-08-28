@@ -638,7 +638,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-<b>drag controls module><b/>
+<b>drag controls module<b/>
 ```python
 #dragControls.py
 
