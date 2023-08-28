@@ -898,9 +898,9 @@ clicked = _my_component()
 if clicked:
     st.write(f"You clicked the button: {clicked}")
 
-<b>run the iApp</>
+<b>run the iApp</></b>
 codephreak.py
-<b>inject html and JavaScript into the streamlit iApp</>
+<b>inject html and JavaScript into the streamlit iApp</></b>
 
 import streamlit as st
 
