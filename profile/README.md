@@ -874,12 +874,13 @@ function App() {
 
 export default withStreamlitConnection(App);
 ```
-<b>build the react component<b/>
+<b>build the react component<b/><br />
+
 bash```
 npm run build
 ```
 
-<b>create the streamlit</a>
+<b>create the streamlit</b>
 python```
 #codephreak.py
 import streamlit as st
