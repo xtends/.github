@@ -850,12 +850,15 @@ if __name__ == "__main__":
 ```
 
 <b>diving deeper streamlit and react</a>
-
+```bash
 npx create-react-app my-streamlit-component
-
+```
+```bash
 npm install --save streamlit-component-lib
+```
 
 <b>modify /src/iApp.js</b>
+```javascript
 import { Streamlit, withStreamlitConnection } from "streamlit-component-lib";
 import React from "react";
 
@@ -870,13 +873,13 @@ function App() {
 }
 
 export default withStreamlitConnection(App);
-
+```
 <b>build the component</>
 npm run build
-
+```
 
 <b>create the streamlit</a>
-
+python```
 #codephreak.py
 import streamlit as st
 import streamlit.components.v1 as components
@@ -905,7 +908,7 @@ st.write(
     """,
     unsafe_allow_html=True,
 )
-
+```
 #############################################
 unsafe_allow_html=True to allow HTML content. The JavaScript function myFunction shows an alert box when the button is clicked.
 
