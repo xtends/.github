@@ -910,7 +910,9 @@ st.write(
 )
 ```
 #############################################
-unsafe_allow_html=True to allow HTML content. The JavaScript function myFunction shows an alert box when the button is clicked.
+
+unsafe_allow_html=True to allow HTML content<br />
+The JavaScript function myFunction shows an alert box when the button is clicked<br />
 
 Security Considerations
 
