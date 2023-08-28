@@ -274,6 +274,7 @@ if __name__ == "__main__":
 ```
 <b>chatGPT integration</b>
 ```python
+#chatpgt.py
 import streamlit as st
 
 class ChatGPTComponent:
@@ -301,6 +302,7 @@ if __name__ == "__main__":
 ```
 <b>fetch and display data from a database API</b>
 ```python
+#fetchdisplaydata.py
 import streamlit as st
 
 class DatabaseComponent:
@@ -324,6 +326,7 @@ if __name__ == "__main__":
     main()
 ```
 <b>creating a codephreak worthy interactive <a href="https://github.com/faicey">UIUX</a><a href="https://github.com/mlodular">mlodular</a> interface</b>
+#interactive.py
 ```python
 import streamlit as st
 
@@ -344,6 +347,7 @@ if __name__ == "__main__":
 ```
 <b>customized real time updates</b>
 ```python
+#realtime.py
 import streamlit as st
 
 class RealTimeComponent:
@@ -364,6 +368,7 @@ if __name__ == "__main__":
 ```
 <b>progressive loading</b>
 ```python
+#progressiveloading.py
 import streamlit as st
 import time
 
@@ -386,6 +391,7 @@ if __name__ == "__main__":
 ```
 <b>contextual interaction</b>
 ```python
+#contexual.py
 import streamlit as st
 
 class ContextualComponent:
@@ -409,6 +415,7 @@ if __name__ == "__main__":
 ```
 <b>error handling/<b>
 ```python
+#errorhandling.py
 import streamlit as st
 
 class ErrorComponent:
@@ -433,6 +440,7 @@ if __name__ == "__main__":
 ```
 <b>security considerations skeleton ... customize to your own needs</b>
 ```python
+#security.py
 import streamlit as st
 
 class SecureComponent:
@@ -516,7 +524,7 @@ if __name__ == "__main__":
 <a href="https://github.com/Faicey"><b>FAICE</b></a>=<b>Framework for Autonomous and Intelligent Computer Expressions</b>
 <b>the faice of codephreak</b>
 ```python
-# faice.py
+#faice.py
 
 import streamlit as st
 
@@ -545,7 +553,7 @@ if __name__ == "__main__":
 ```
 <b>newfaice upload to faice</b>
 ```python
-# newfaice.py
+#newfaice.py
 
 import streamlit as st
 
@@ -584,7 +592,7 @@ if __name__ == "__main__":
 
 <b>transform controls xyz with three.js as a python module</b><br />
 manipulate 3D objects using transform controls, such as translation, rotation, and scaling
-
+```python
 # transformControls.py
 
 import streamlit as st
@@ -612,7 +620,7 @@ if __name__ == "__main__":
 
 
 <b>add transformUIUX.py to your iApp ensure that transformControls.py is in the same folder</b>
-
+```python
 # transformUIUX.py
 
 import streamlit as st
@@ -632,7 +640,8 @@ if __name__ == "__main__":
     main()
 
 <b>drag controls module><b/>
-# dragControls.py
+```python
+#dragControls.py
 
 import streamlit as st
 
