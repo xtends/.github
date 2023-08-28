@@ -35,7 +35,8 @@ streamlit run newfaice.py
 Today I discovered <a href="https://streamlit.io/">Streamlit</a>. Start by creating an application in a Python file (iApp.py). I like to use notepad or gedit. Use whatever editor you like. Streamlit turns data scripts into shareable web apps blazingly fast... and with autonomous deployment well just stand back. You might not never need to read any of these notes.
 All in pure <a href="https://www.python.org/">Python</a>. No front‑end experience required.
 <br />
-example 1: Import the Streamlit library and define a function to display a welcome message.
+
+example 1: Import the Streamlit library, ask the user for a gpt API key, import a couple of encryption libraries,  and define a function to display a welcome message and start chatting with chatgpt.py click chatgpt.py for the full source code. iApp - from zero to hero<br />
 
 <b>Step 3: Modular Design</b>
 
