@@ -3,7 +3,7 @@
 # FAICE
 <b>Framework for Autonomous and Intelligent Computer Expressions</b></br>
 # iApps
-<b>Intelligent Agent Python Programming</a><br />
+<b>Intelligent Agent Python Programming</a></b><br /><br />
 
 <b>Step 1: Environment Setup</b>
 
