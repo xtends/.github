@@ -493,7 +493,7 @@ if __name__ == "__main__":
 # <a href="https://github.com/Faicey">FAICE</a>=Framework for Autonomous and Intelligent Computer Expressions
 the faice of codephreak
 ```python
-# phreakUIUX.py
+# faice.py
 
 import streamlit as st
 
@@ -520,8 +520,8 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# newfaice for codephreak
-
+# newfaice upload to faice
+```python
 # newfaice.py
 
 import streamlit as st
