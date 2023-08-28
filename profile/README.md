@@ -582,6 +582,152 @@ if __name__ == "__main__":
     main(uploaded_file)
 ```
 
+<b>transform controls xyz with three.js as a python module</b><br />
+manipulate 3D objects using transform controls, such as translation, rotation, and scaling
+
+# transformControls.py
+
+import streamlit as st
+
+class ThreeJSTransformControls:
+    def render_transform_controls_scene(self):
+        st.title("Three.js Integration: Transform Controls Example")
+        st.markdown('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>', unsafe_allow_html=True)
+        st.markdown('<script src="https://threejs.org/examples/js/controls/TransformControls.js"></script>', unsafe_allow_html=True)
+        st.write('<div id="container"></div>', unsafe_allow_html=True)
+        st.markdown("""
+        <script>
+            // Three.js code for rendering the Transform Controls example
+            // You can replace this script with the content from the example link you provided.
+        </script>
+        """, unsafe_allow_html=True)
+
+transform_controls_viewer = ThreeJSTransformControls()
+
+def main():
+    transform_controls_viewer.render_transform_controls_scene()
+
+if __name__ == "__main__":
+    main()
+
+
+<b>add transformUIUX.py to your iApp ensure that transformControls.py is in the same folder</b>
+
+# transformUIUX.py
+
+import streamlit as st
+from transformControls import ThreeJSTransformControls
+
+transform_controls_viewer = ThreeJSTransformControls()
+
+def main():
+    st.title("iApps - From Zero to Hero")
+    st.write("Welcome to your advanced UI/UX experience!")
+
+    # You can include other components and functionality here
+
+    transform_controls_viewer.render_transform_controls_scene()
+
+if __name__ == "__main__":
+    main()
+
+<b>drag controls module><b/>
+# dragControls.py
+
+import streamlit as st
+
+class ThreeJSDragControls:
+    def render_drag_controls_scene(self):
+        st.title("Three.js Integration: Drag Controls Example")
+        st.markdown('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>', unsafe_allow_html=True)
+        st.markdown('<script src="https://threejs.org/examples/js/controls/DragControls.js"></script>', unsafe_allow_html=True)
+        st.write('<div id="container"></div>', unsafe_allow_html=True)
+        st.markdown("""
+        <script>
+            // Three.js code for rendering the Drag Controls example
+            // You can replace this script with the content from the example link you provided.
+        </script>
+        """, unsafe_allow_html=True)
+
+drag_controls_viewer = ThreeJSDragControls()
+
+def main():
+    drag_controls_viewer.render_drag_controls_scene()
+
+if __name__ == "__main__":
+    main()
+
+# dragcontrolsUIUX.py
+
+import streamlit as st
+from dragControls import ThreeJSDragControls
+
+drag_controls_viewer = ThreeJSDragControls()
+
+def main():
+    st.title("iApps - From Zero to Hero")
+    st.write("Welcome to your advanced UI/UX experience!")
+
+    # You can include other components and functionality here
+
+    drag_controls_viewer.render_drag_controls_scene()
+
+if __name__ == "__main__":
+    main()
+
+<b>codephreak openGL animation module</b>  
+<b>keyframesAnimation.py</b>
+
+# keyframesAnimation.py
+
+import streamlit as st
+
+class ThreeJSKeyframesAnimation:
+    def render_keyframes_animation_scene(self):
+        st.title("Three.js Integration: Keyframes Animation Example")
+        st.markdown('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>', unsafe_allow_html=True)
+        st.write('<div id="container"></div>', unsafe_allow_html=True)
+        st.markdown("""
+        <script>
+            // Three.js code for rendering the keyframes animation example
+            // You can replace this script with the content from the example link you provided.
+        </script>
+        """, unsafe_allow_html=True)
+
+keyframes_animation_viewer = ThreeJSKeyframesAnimation()
+
+def main():
+    keyframes_animation_viewer.render_keyframes_animation_scene()
+
+if __name__ == "__main__":
+    main()
+
+<b>include keyframes in your phreakUIUX.py include the module in the same folder</b>
+# phreakUIUX.py
+
+import streamlit as st
+from keyframesAnimation import ThreeJSKeyframesAnimation
+
+keyframes_animation_viewer = ThreeJSKeyframesAnimation()
+
+def main():
+    st.title("iApps - From Zero to Hero")
+    st.write("Welcome to your advanced UI/UX experience!")
+
+    # You can include other components and functionality here
+
+    keyframes_animation_viewer.render_keyframes_animation_scene()
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
 
 
 
