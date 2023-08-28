@@ -63,7 +63,6 @@ streamlit cache clear
 streamlit docs
 streamlit --version
 ```
-
 # display text and markdown
 ```python
 st.text('Fixed width text')
@@ -94,39 +93,403 @@ st.button('Click me')
 st.checkbox('I agree')
 st.toggle('Enable')
 ```
-# import convention
+# selection widgets
 ```python
-import streamlit as st
+st.radio('Pick one', ['cats', 'dogs'])
+st.selectbox('Pick one', ['cats', 'dogs'])
+st.multiselect('Buy', ['milk', 'apples', 'potatoes'])
+```
+# slider and input
+```python
+st.slider('Pick a number', 0, 100)
+st.select_slider('Pick a size', ['S', 'M', 'L'])
+st.text_input('First name')
+st.number_input('Pick a number', 0, 10)
+st.text_area('Text to translate')
+st.date_input('Your birthday')
+st.time_input('Meeting time')
+st.file_uploader('Upload a CSV')
+st.camera_input("Take a picture")
+st.color_picker('Pick a color')
+```
+# layout and structure
+```python
+col1, col2 = st.columns(2)
+col1.write("This is column 1")
+col2.write("This is column 2")
+```
+# tabs
+```python
+tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
+tab1.write("this is tab 1")
+tab2.write("this is tab 2")
+```
+# control flow interaction
+```python
+st.stop()
+st.experimental_rerun()
+```
+# grouping widgets
+```python
+with st.form(key='my_form'):
+    username = st.text_input('Username')
+    password = st.text_input('Password')
+    st.form_submit_button('Login')
+```
+# caching data objects
+```python
+@st.cache_data
+def foo(bar):
+    # Expensive computation
+    return data
+```
+# caching data objects
+```python
+@st.cache_data
+def foo(bar):
+    # Expensive computation
+    return data
+```
+# global resource caching
+```python
+@st.cache_resource
+def foo(bar):
+    # Create non-data object
+    return session
+```
+# display progress and status
+```python
+with st.spinner(text='In progress'):
+    time.sleep(3)
+    st.success('Done')
+bar = st.progress(50)
+time.sleep(3)
+bar.progress(100)
+with st.status('Authenticating...') as s:
+    time.sleep(2)
+    st.write('Some long response.')
+    s.update(label='Response')
+```
+# personalization UIUX
+```python
+if st.user.email == 'codephreak@dmg.finance':
+    display_codephreak_content()
+elif st.user.email == 'adamsmith@foocorp.io':
+    display_adamsmith_content()
+else:
+    st.write("Signup here for access to great things")
+```
+# sharing url's
+```python
+params = {'param1': value1, 'param2': value2}
+st.experimental_set_query_params(**params)
+```
+# connecting to data sources
+```python
+st.experimental_connection('database', type='sql')
+conn = st.experimental_connection('sql')
 ```
 
-# import convention
-```python
-import streamlit as st
-```
-# import convention
-```python
-import streamlit as st
-```
+Streamlit Custom Components Tips
+1. Custom Language Model Integration
 
-# import convention
-```python
-import streamlit as st
-```
+You can create custom components that interface with local language models for tasks like sentiment analysis, translation, and summarization. Use the st.pydeck_chart component to visualize language model outputs interactively.
+2. ChatGPT Integration
 
-# import convention
-```python
-import streamlit as st
-```
+Integrate the ChatGPT API into your Streamlit app using a custom component. This allows users to have dynamic conversations with AI and obtain context-aware responses in real-time.
+3. Database API Integration
 
-# import convention
-```python
-import streamlit as st
-```
+Develop a custom component that interfaces with database APIs to fetch and display data seamlessly. This enables users to interact with and manipulate data directly within your app.
+4. User-Friendly Interfaces
 
-# import convention
+Design user-friendly interfaces for your custom components using intuitive widgets like buttons, sliders, and input fields. Keep the user experience streamlined and accessible.
+5. Real-Time Updates
+
+Enable real-time updates in custom components by integrating Streamlit's reactive framework. Ensure that changes in language models, ChatGPT responses, or database updates are reflected instantly.
+6. Progressive Loading
+
+Implement progressive loading for language model responses or API queries. Use placeholders and loading spinners to provide feedback while waiting for data to load.
+7. Contextual User Interactions
+
+Create custom components that allow users to interact contextually with AI models. For instance, trigger ChatGPT responses based on user actions or clicks.
+8. Error Handling
+
+Implement robust error handling in your custom components. Display clear error messages and provide users with guidance on how to proceed when unexpected issues arise.
+9. Security Considerations
+
+Prioritize security when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.
+
+#################################
+xperimental zone no promises here
+#################################
+# sentiment analysis
 ```python
+
 import streamlit as st
+
+class SentimentAnalyzer:
+    def analyze_sentiment(self, text):
+        # Your sentiment analysis logic
+        sentiment_score = analyze(text)
+        return sentiment_score
+
+analyzer = SentimentAnalyzer()
+
+def main():
+    st.title("Sentiment Analysis App")
+    text = st.text_area("Enter text for sentiment analysis")
+    
+    if st.button("Analyze"):
+        sentiment_score = analyzer.analyze_sentiment(text)
+        st.write(f"Sentiment score: {sentiment_score}")
+
+if __name__ == "__main__":
+    main()
 ```
+# chatGPT integration
+import streamlit as st
+
+class ChatGPTComponent:
+    def __init__(self, api_key):
+        self.api_key = api_key
+
+    def chat_with_gpt(self, message):
+        # Call ChatGPT API with user message
+        response = call_chatgpt_api(message, self.api_key)
+        return response["message"]
+
+api_key = "your_chatgpt_api_key"
+chatgpt = ChatGPTComponent(api_key)
+
+def main():
+    st.title("Chat with codephreak-GPT4")
+    user_input = st.text_input("You:", "")
+    
+    if st.button("Send"):
+        response = chatgpt.chat_with_gpt(user_input)
+        st.write("AI:", response)
+
+if __name__ == "__main__":
+    main()
+
+# fetch and display data from a database API
+
+import streamlit as st
+
+class DatabaseComponent:
+    def fetch_data(self):
+        # Fetch data from database API
+        data = fetch_data_from_api()
+        return data
+
+db_component = DatabaseComponent()
+
+def main():
+    st.title("Database Viewer")
+    data = db_component.fetch_data()
+    
+    if data:
+        st.dataframe(data)
+    else:
+        st.write("No data available")
+
+if __name__ == "__main__":
+    main()
+
+# a better codephreak worthy UIUX interface
+
+import streamlit as st
+
+class InteractiveComponent:
+    def get_user_input(self):
+        user_input = st.text_input("Enter something:", "")
+        return user_input
+
+interactor = InteractiveComponent()
+
+def main():
+    st.title("Interactive App")
+    user_input = interactor.get_user_input()
+    st.write("You entered:", user_input)
+
+if __name__ == "__main__":
+    main()
+
+# customized real time updates
+
+import streamlit as st
+
+class RealTimeComponent:
+    def update_data(self):
+        # Update data in real-time
+        new_data = get_updated_data()
+        return new_data
+
+rt_component = RealTimeComponent()
+
+def main():
+    st.title("Real-Time Data Update")
+    updated_data = rt_component.update_data()
+    st.write("Updated Data:", updated_data)
+
+if __name__ == "__main__":
+    main()
+
+
+# progressive loading
+
+import streamlit as st
+import time
+
+class LoadingComponent:
+    def load_data(self):
+        st.text("Loading data...")
+        time.sleep(3)
+        data = fetch_data()
+        return data
+
+loader = LoadingComponent()
+
+def main():
+    st.title("Progressive Loading")
+    data = loader.load_data()
+    st.write("Loaded Data:", data)
+
+if __name__ == "__main__":
+    main()
+
+
+# contextual interaction
+import streamlit as st
+
+class ContextualComponent:
+    def interact(self, context):
+        if context == "greet":
+            st.write("Hello, I am Professor Codephreak")
+        elif context == "inform":
+            st.write("Here's some information.")
+        else:
+            st.write("I'm not sure how to respond.")
+
+contextual = ContextualComponent()
+
+def main():
+    st.title("Contextual Interaction")
+    interaction_type = st.selectbox("Select interaction type:", ["greet", "inform", "other"])
+    contextual.interact(interaction_type)
+
+if __name__ == "__main__":
+    main()
+
+# error handling
+
+import streamlit as st
+
+class ErrorComponent:
+    def perform_task(self):
+        try:
+            result = perform_risky_task()
+            return result
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
+            return None
+
+error_handler = ErrorComponent()
+
+def main():
+    st.title("Error Handling")
+    task_result = error_handler.perform_task()
+    if task_result is not None:
+        st.write("Task Result:", task_result)
+
+if __name__ == "__main__":
+    main()
+
+# security considerations far from complete
+
+import streamlit as st
+
+class SecureComponent:
+    def perform_secure_task(self):
+        secure_input = st.text_input("Enter secure input", type="password")
+        # Implement secure processing here
+        return secure_output
+
+secure_processor = SecureComponent()
+
+def main():
+    st.title("Secure Processing")
+    secure_result = secure_processor.perform_secure_task()
+    st.write("Secure Result:", secure_result)
+
+if __name__ == "__main__":
+    main()
+
+# provide comprehensive documentation for custom components to guide users
+import streamlit as st
+
+class DocumentationComponent:
+    def display_documentation(self):
+        st.markdown("# Custom Component Documentation")
+        st.write("This is a detailed guide on how to use this component.")
+        st.code("class DocumentationComponent:\n    def display_documentation(self):\n        # Documentation content")
+
+doc_component = DocumentationComponent()
+
+def main():
+    st.title("Custom Component Documentation")
+    doc_component.display_documentation()
+
+if __name__ == "__main__":
+    main()
+
+# add some style
+
+import streamlit as st
+
+class StyledComponent:
+    def show_styled_content(self):
+        st.markdown('<style>body { background-color: #f0f0f0; }</style>', unsafe_allow_html=True)
+        st.title("Stylish App")
+        st.write("This app has a customized background color.")
+
+styler = StyledComponent()
+
+def main():
+    styler.show_styled_content()
+
+if __name__ == "__main__":
+    main()
+
+# three.js
+
+import streamlit as st
+
+class ThreeJSComponent:
+    def show_3d_model(self):
+        st.title("3D Model Viewer")
+        st.markdown('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>', unsafe_allow_html=True)
+        st.write('<div id="container"></div>', unsafe_allow_html=True)
+        st.markdown("""
+        <script>
+            // Three.js code to render 3D model
+        </script>
+        """, unsafe_allow_html=True)
+
+threejs_viewer = ThreeJSComponent()
+
+def main():
+    threejs_viewer.show_3d_model()
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
 
 
 
