@@ -1,9 +1,30 @@
-# iApps - from zero to hero
+# iApps - from zero to hero<br />
+# FAICE = Framework for Autonomous and Intelligent Computer Expressions</br>
 
 Step 1: Environment Setup
 
-Create a virtual environment and activate it.
-Install required packages using pip.
+# create a python virtual environment
+```bash
+python3 -m venv myenv
+```
+# activate python virtual environment
+```bash
+source myenv/bin/activate
+```
+
+# Install required packages using pip<br />
+```bash
+pip install streamlit
+```
+
+# example run faice iApp
+```bash
+streamlit run faice.py
+```
+# example run newfaice iApp
+```bash
+streamlit run newfaice.py
+```
 
 Step 2: Hello World
 
