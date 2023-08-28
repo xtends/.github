@@ -240,7 +240,7 @@ Create custom components that allow users to interact contextually with AI model
 Implement robust error handling in your custom components. Display clear error messages and provide users with guidance on how to proceed when unexpected issues arise.<br /><br />
 9. <b>Security Considerations</b><br />
 
-Prioritize security when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.<br />
+Prioritize <a href="https://en.wikipedia.org/wiki/Open-source_software_security">security</a> when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.<br />
 
 # #################################
 # xperimental zone no promises here
