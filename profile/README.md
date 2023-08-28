@@ -323,7 +323,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-<b>creating a codephreak worthy UIUX interface</b>
+<b>creating a codephreak worthy interactive <a href="https://github.com/faicey">UIUX</a><a href="https://github.com/mlodular">mlodular</a> interface</b>
 ```python
 import streamlit as st
 
