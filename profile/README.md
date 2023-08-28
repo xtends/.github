@@ -849,7 +849,7 @@ if __name__ == "__main__":
     main()
 ```
 
-<b>integrating streamlit with react</a>
+# <b>integrating streamlit with react</a>
 ```bash
 npx create-react-app my-streamlit-component
 ```
@@ -874,7 +874,8 @@ function App() {
 
 export default withStreamlitConnection(App);
 ```
-<b>build the component</>
+<b>build the react component<b/>
+bash```
 npm run build
 ```
 
