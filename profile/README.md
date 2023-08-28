@@ -731,6 +731,121 @@ if __name__ == "__main__":
     main()
 
 
+################ putting it all together ######################
+<b>module to import a local language model as an app controller</b>
+
+# localLanguageModels.py
+
+import streamlit as st
+from transformers import pipeline
+
+class LocalLanguageModels:
+    def __init__(self):
+        self.text_generator = pipeline("text-generation")
+
+    def generate_text(self, prompt):
+        generated_text = self.text_generator(prompt, max_length=100)
+        return generated_text[0]['generated_text']
+
+    def render_language_model_integration(self):
+        st.title("Local Language Model Integration")
+        prompt = st.text_input("Enter a prompt", "Once upon a time...")
+        if st.button("Generate"):
+            generated_text = self.generate_text(prompt)
+            st.write("Generated Text:")
+            st.write(generated_text)
+
+<b>updated codephreakUIUX.py</b>
+
+# codephreakUIUX.py
+
+import streamlit as st
+from dragControls import ThreeJSDragControls
+from decalsExample import ThreeJSDecalsExample
+from keyframesAnimation import ThreeJSKeyframesAnimation
+from newfaice import NewFaceGenerator
+from chatgpt import ChatGPTInterface
+from localLanguageModels import LocalLanguageModels
+
+class CodephreakUIUXApp:
+    def __init__(self):
+        self.drag_controls_viewer = ThreeJSDragControls()
+        self.decals_example_viewer = ThreeJSDecalsExample()
+        self.keyframes_animation_viewer = ThreeJSKeyframesAnimation()
+        self.new_face_generator = NewFaceGenerator()
+        self.chatgpt_interface = ChatGPTInterface()
+        self.language_model_integration = LocalLanguageModels()
+
+    def render_app(self):
+        st.title("iApps - From Zero to Hero")
+        st.write("Welcome to your advanced UI/UX experience!")
+
+        # You can include other components and functionality here
+
+        self.drag_controls_viewer.render_drag_controls_scene()
+        self.decals_example_viewer.render_decals_example_scene()
+        self.keyframes_animation_viewer.render_keyframes_animation_scene()
+        self.new_face_generator.render_new_face_generator()
+        self.chatgpt_interface.render_chatgpt_interface()
+        self.language_model_integration.render_language_model_integration()
+
+def main():
+    app = CodephreakUIUXApp()
+    app.render_app()
+
+if __name__ == "__main__":
+    main()
+
+<b>codephreakUIUX.py experimental user prompt version to be tested</b>
+
+# codephreakUIUX.py
+
+import streamlit as st
+from dragControls import ThreeJSDragControls
+from decalsExample import ThreeJSDecalsExample
+from keyframesAnimation import ThreeJSKeyframesAnimation
+from newfaice import NewFaceGenerator
+from chatgpt import ChatGPTInterface
+from localLanguageModels import LocalLanguageModels
+
+class CodephreakUIUXApp:
+    def __init__(self):
+        self.drag_controls_viewer = ThreeJSDragControls()
+        self.decals_example_viewer = ThreeJSDecalsExample()
+        self.keyframes_animation_viewer = ThreeJSKeyframesAnimation()
+        self.new_face_generator = NewFaceGenerator()
+        self.chatgpt_interface = ChatGPTInterface()
+        self.language_model_integration = LocalLanguageModels()
+
+    def prompt_api_keys(self):
+        st.title("Enter API Keys")
+        self.chatgpt_api_key = st.text_input("ChatGPT API Key")
+        self.language_model_api_key = st.text_input("Local Language Model API Key")
+        self.database_api_key = st.text_input("Database API Key")
+
+    def render_app(self):
+        self.prompt_api_keys()
+
+        st.title("iApps - From Zero to Hero")
+        st.write("Welcome to your advanced UI/UX experience!")
+
+        # You can include other components and functionality here
+
+        self.drag_controls_viewer.render_drag_controls_scene()
+        self.decals_example_viewer.render_decals_example_scene()
+        self.keyframes_animation_viewer.render_keyframes_animation_scene()
+        self.new_face_generator.render_new_face_generator()
+        self.chatgpt_interface.render_chatgpt_interface(self.chatgpt_api_key)
+        self.language_model_integration.render_language_model_integration(self.language_model_api_key)
+        # Include database integration here using self.database_api_key
+
+def main():
+    app = CodephreakUIUXApp()
+    app.render_app()
+
+if __name__ == "__main__":
+    main()
+
 
 
 
