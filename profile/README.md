@@ -490,8 +490,9 @@ if __name__ == "__main__":
 ```
 # #########################################################
 # alien DEVzone use with caution everything might be broken
-faice=Framework for Autonomous and Intelligent Computer Expressions
+# <a href="https://github.com/Faicey">FAICE</a>=Framework for Autonomous and Intelligent Computer Expressions
 the faice of codephreak
+```python
 # phreakUIUX.py
 
 import streamlit as st
@@ -518,7 +519,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 # newfaice for codephreak
 
 # newfaice.py
@@ -556,6 +557,7 @@ def main(uploaded_file):
 if __name__ == "__main__":
     uploaded_file = st.file_uploader("Upload a custom graphic", type=["jpg", "png", "jpeg"])
     main(uploaded_file)
+```
 
 
 
