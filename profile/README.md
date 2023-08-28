@@ -190,38 +190,41 @@ st.experimental_connection('database', type='sql')
 conn = st.experimental_connection('sql')
 ```
 
-Streamlit Custom Components Tips
-1. Custom Language Model Integration
+# Streamlit Custom Components Tips<br />
 
-You can create custom components that interface with local language models for tasks like sentiment analysis, translation, and summarization. Use the st.pydeck_chart component to visualize language model outputs interactively.
-2. ChatGPT Integration
+1. Custom Language Model Integration<br />
 
-Integrate the ChatGPT API into your Streamlit app using a custom component. This allows users to have dynamic conversations with AI and obtain context-aware responses in real-time.
-3. Database API Integration
+You can create custom components that interface with local language models for tasks like sentiment analysis, translation, and summarization. Use the st.pydeck_chart component to visualize language model outputs interactively.<br />
+2. ChatGPT Integration<br />
 
-Develop a custom component that interfaces with database APIs to fetch and display data seamlessly. This enables users to interact with and manipulate data directly within your app.
+Integrate the ChatGPT API into your Streamlit app using a custom component. This allows users to have dynamic conversations with AI and obtain context-aware responses in real-time.<br />
+3. Database API Integration<br />
+
+Develop a custom component that interfaces with database APIs to fetch and display data seamlessly. This enables users to interact with and manipulate data directly within your app.<br />
 4. User-Friendly Interfaces
 
-Design user-friendly interfaces for your custom components using intuitive widgets like buttons, sliders, and input fields. Keep the user experience streamlined and accessible.
-5. Real-Time Updates
+Design user-friendly interfaces for your custom components using intuitive widgets like buttons, sliders, and input fields. Keep the user experience streamlined and accessible.<br />
+5. Real-Time Updates<br />
 
-Enable real-time updates in custom components by integrating Streamlit's reactive framework. Ensure that changes in language models, ChatGPT responses, or database updates are reflected instantly.
-6. Progressive Loading
+Enable real-time updates in custom components by integrating Streamlit's reactive framework. Ensure that changes in language models, ChatGPT responses, or database updates are reflected instantly.<br />
+6. Progressive Loading<br />
 
-Implement progressive loading for language model responses or API queries. Use placeholders and loading spinners to provide feedback while waiting for data to load.
-7. Contextual User Interactions
+Implement progressive loading for language model responses or API queries. Use placeholders and loading spinners to provide feedback while waiting for data to load.<br />
+7. Contextual User Interactions<br />
 
-Create custom components that allow users to interact contextually with AI models. For instance, trigger ChatGPT responses based on user actions or clicks.
-8. Error Handling
+Create custom components that allow users to interact contextually with AI models. For instance, trigger ChatGPT responses based on user actions or clicks.<br />
+8. Error Handling<br />
 
-Implement robust error handling in your custom components. Display clear error messages and provide users with guidance on how to proceed when unexpected issues arise.
-9. Security Considerations
+Implement robust error handling in your custom components. Display clear error messages and provide users with guidance on how to proceed when unexpected issues arise.<br />
+9. Security Considerations<br />
 
-Prioritize security when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.
+Prioritize security when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.<br />
 
 #################################
 xperimental zone no promises here
 #################################
+<br />
+```python
 # sentiment analysis
 ```python
 
@@ -247,6 +250,7 @@ if __name__ == "__main__":
     main()
 ```
 # chatGPT integration
+```python
 import streamlit as st
 
 class ChatGPTComponent:
@@ -271,7 +275,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 # fetch and display data from a database API
 
 import streamlit as st
@@ -295,9 +299,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 # a better codephreak worthy UIUX interface
-
+```python
 import streamlit as st
 
 class InteractiveComponent:
@@ -314,9 +318,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 # customized real time updates
-
+```python
 import streamlit as st
 
 class RealTimeComponent:
@@ -334,10 +338,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
+```
 # progressive loading
-
+```python
 import streamlit as st
 import time
 
@@ -357,9 +360,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
+```
 # contextual interaction
+```python
 import streamlit as st
 
 class ContextualComponent:
@@ -380,9 +383,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 # error handling
-
+```python
 import streamlit as st
 
 class ErrorComponent:
@@ -404,9 +407,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# security considerations far from complete
-
+```
+# security considerations ....... far from complete
+```python
 import streamlit as st
 
 class SecureComponent:
@@ -424,8 +427,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 # provide comprehensive documentation for custom components to guide users
+```python
 import streamlit as st
 
 class DocumentationComponent:
@@ -442,9 +446,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 # add some style
-
+```python
 import streamlit as st
 
 class StyledComponent:
@@ -460,9 +464,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# three.js
-
+```
+# add some 3D interactive elements three.js
+```python
 import streamlit as st
 
 class ThreeJSComponent:
@@ -483,7 +487,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 
 
 
