@@ -910,14 +910,13 @@ st.write(
     unsafe_allow_html=True,
 )
 ```
-#############################################
 
-unsafe_allow_html=True to allow HTML content<br />
-The JavaScript function myFunction shows an alert box when the button is clicked<br />
+setting unsafe_allow_html=True to allows HTML content<br />
+as an example the JavaScript function myFunction shows an alert box when the button is clicked<br />
 
-Security Considerations
+<b>Security Considerations for the platforming of iApps from here are considerable</b>
 
-    Input Validation and Sanitization: Always sanitize and validate data coming from custom components.
+    Input Validaition and Sanitization: Always sanitize and validate data coming from custom components.
     Least Privilege Principle: Only use the permissions you need.
     Secure Communication: If the component interacts with external services, make sure to use HTTPS.
     Threat Modeling: Understand the data flows and potential areas where sensitive information might be exposed.
