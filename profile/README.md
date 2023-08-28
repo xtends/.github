@@ -801,7 +801,7 @@ if __name__ == "__main__":
 ```
 <b>codephreakUIUX.py experimental user prompt version to be tested NO SECURITY v1</b>
 ```python
-# codephreakUIUX.py
+#codephreakUIUX.py
 
 import streamlit as st
 from dragControls import ThreeJSDragControls
@@ -860,6 +860,7 @@ npm install --save streamlit-component-lib
 ```
 
 <b>modify /src/iApp.js</b>
+
 ```javascript
 import { Streamlit, withStreamlitConnection } from "streamlit-component-lib";
 import React from "react";
@@ -875,15 +876,17 @@ function App() {
 }
 
 export default withStreamlitConnection(App);
+
 ```
+
 <b>build the react component</b><br />
 
-bash```
+```bash
 npm run build
 ```
 
 <b>create the streamlit</b>
-python```
+```python
 #codephreak.py
 import streamlit as st
 import streamlit.components.v1 as components
