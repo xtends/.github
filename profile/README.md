@@ -349,7 +349,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-<b>customized real time updates</b>
+<b>customizing real time updates</b>
 ```python
 #realtime.py
 import streamlit as st
@@ -500,7 +500,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-<b>add some 3D interactive elements three.js</b>
+<b>add some <a href="https://github.com/webmindml/DDD.ddd">DDD</a> 3D interactive elements using <a href="https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene">three.js</a></b>
 ```python
 import streamlit as st
 
