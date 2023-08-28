@@ -38,7 +38,7 @@ Create a separate Python file (modules.py) to organize modular code.
 Move the display_hello function to modules.py.
 Import display_hello from modules.py into app.py.
 
-<b>Step 4: UI/UX/<b>
+<b>Step 4: UI/UX/</b>
 
 Enhance the UI by adding user input elements like buttons and text inputs.
 Utilize the Streamlit functions to create user-friendly interaction.
@@ -115,13 +115,13 @@ st.button('Click me')
 st.checkbox('I agree')
 st.toggle('Enable')
 ```
-# selection widgets
+<b>selection widgets</b>
 ```python
 st.radio('Pick one', ['cats', 'dogs'])
 st.selectbox('Pick one', ['cats', 'dogs'])
 st.multiselect('Buy', ['milk', 'apples', 'potatoes'])
 ```
-# slider and input
+<b>slider and input</b>
 ```python
 st.slider('Pick a number', 0, 100)
 st.select_slider('Pick a size', ['S', 'M', 'L'])
@@ -134,52 +134,52 @@ st.file_uploader('Upload a CSV')
 st.camera_input("Take a picture")
 st.color_picker('Pick a color')
 ```
-# layout and structure
+<b>layout and structure</b>
 ```python
 col1, col2 = st.columns(2)
 col1.write("This is column 1")
 col2.write("This is column 2")
 ```
-# tabs
+<b>tabs</b>
 ```python
 tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
 tab1.write("this is tab 1")
 tab2.write("this is tab 2")
 ```
-# control flow interaction
+<b>control flow interaction</b>
 ```python
 st.stop()
 st.experimental_rerun()
 ```
-# grouping widgets
+<b>grouping widgets</b>
 ```python
 with st.form(key='my_form'):
     username = st.text_input('Username')
     password = st.text_input('Password')
     st.form_submit_button('Login')
 ```
-# caching data objects
+<b>caching data objects</b>
 ```python
 @st.cache_data
 def foo(bar):
     # Expensive computation
     return data
 ```
-# caching data objects
+<b>caching data objects</b>
 ```python
 @st.cache_data
 def foo(bar):
     # Expensive computation
     return data
 ```
-# global resource caching
+<b>global resource caching</b>
 ```python
 @st.cache_resource
 def foo(bar):
     # Create non-data object
     return session
 ```
-# display progress and status
+<b>display progress and status</b>
 ```python
 with st.spinner(text='In progress'):
     time.sleep(3)
@@ -192,7 +192,7 @@ with st.status('Authenticating...') as s:
     st.write('Some long response.')
     s.update(label='Response')
 ```
-# personalization UIUX
+<b>personalization UIUX</b>
 ```python
 if st.user.email == 'codephreak@dmg.finance':
     display_codephreak_content()
@@ -201,53 +201,54 @@ elif st.user.email == 'adamsmith@foocorp.io':
 else:
     st.write("Signup here for access to great things")
 ```
-# sharing url's
+<b>sharing url's</b>
 ```python
 params = {'param1': value1, 'param2': value2}
 st.experimental_set_query_params(**params)
 ```
-# connecting to data sources
+<b>connecting to data sources</b>
 ```python
 st.experimental_connection('database', type='sql')
 conn = st.experimental_connection('sql')
 ```
 
-# Streamlit Custom Components Tips<br />
+# <b>Streamlit Custom Components Tips</b><br />
 
-1. Custom Language Model Integration<br />
+1. <b>Custom Language Model Integration</b><br />
 
 You can create custom components that interface with local language models for tasks like sentiment analysis, translation, and summarization. Use the st.pydeck_chart component to visualize language model outputs interactively.<br /><br />
-2. ChatGPT Integration<br />
+2. <b>ChatGPT Integration</b><br />
 
 Integrate the ChatGPT API into your Streamlit app using a custom component. This allows users to have dynamic conversations with AI and obtain context-aware responses in real-time.<br /><br />
-3. Database API Integration<br />
+3. <b>Database API Integration</b><br />
 
 Develop a custom component that interfaces with database APIs to fetch and display data seamlessly. This enables users to interact with and manipulate data directly within your app.<br /><br />
-4. User-Friendly Interfaces
+4. <b>User-Friendly Interfaces</b>
 
 Design user-friendly interfaces for your custom components using intuitive widgets like buttons, sliders, and input fields. Keep the user experience streamlined and accessible.<br /><br />
-5. Real-Time Updates<br />
+5. <b>Real-Time Updates</b><br />
 
 Enable real-time updates in custom components by integrating Streamlit's reactive framework. Ensure that changes in language models, ChatGPT responses, or database updates are reflected instantly.<br /><br />
-6. Progressive Loading<br />
+6. <b>Progressive Loading</b><br />
 
 Implement progressive loading for language model responses or API queries. Use placeholders and loading spinners to provide feedback while waiting for data to load.<br /><br />
-7. Contextual User Interactions<br />
+7. <b>Contextual User Interactions</b><br />
 
 Create custom components that allow users to interact contextually with AI models. For instance, trigger ChatGPT responses based on user actions or clicks.<br /><br />
-8. Error Handling<br />
+8. <b>Error Handling</b><br />
 
 Implement robust error handling in your custom components. Display clear error messages and provide users with guidance on how to proceed when unexpected issues arise.<br /><br />
-9. Security Considerations<br />
+9. <b>Security Considerations</b><br />
 
 Prioritize security when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.<br />
 
 # #################################
 # xperimental zone no promises here
+# safe storage of API keys is on you
 # #################################
 <br />
 
-# sentiment analysis
+<b>sentiment analysis</b>
 ```python
 
 import streamlit as st
@@ -271,7 +272,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# chatGPT integration
+<b>chatGPT integration</b>
 ```python
 import streamlit as st
 
@@ -298,7 +299,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# fetch and display data from a database API
+<b>fetch and display data from a database API</b>
 ```python
 import streamlit as st
 
@@ -322,7 +323,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# creating a codephreak worthy UIUX interface
+<b>creating a codephreak worthy UIUX interface</b>
 ```python
 import streamlit as st
 
@@ -341,7 +342,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# customized real time updates
+<b>customized real time updates</b>
 ```python
 import streamlit as st
 
@@ -361,7 +362,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# progressive loading
+<b>progressive loading</b>
 ```python
 import streamlit as st
 import time
@@ -383,7 +384,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# contextual interaction
+<b>contextual interaction</b>
 ```python
 import streamlit as st
 
@@ -406,7 +407,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# error handling
+<b>error handling/<b>
 ```python
 import streamlit as st
 
@@ -430,7 +431,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# security considerations ....... far from complete ... insert necessary libraries
+<b>security considerations ....... far from complete ... insert necessary libraries yourself</b>
 ```python
 import streamlit as st
 
@@ -450,7 +451,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# provide comprehensive documentation for custom components to guide users
+<b>provide comprehensive documentation for custom components to guide users</b>
 ```python
 import streamlit as st
 
@@ -469,7 +470,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# add some style
+<b>add some style</b>
 ```python
 import streamlit as st
 
@@ -487,7 +488,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# add some 3D interactive elements three.js
+<b>add some 3D interactive elements three.js</b>
 ```python
 import streamlit as st
 
@@ -512,8 +513,8 @@ if __name__ == "__main__":
 ```
 # #########################################################
 # alien DEVzone use with caution everything might be broken
-# <a href="https://github.com/Faicey">FAICE</a>=Framework for Autonomous and Intelligent Computer Expressions
-the faice of codephreak
+<a href="https://github.com/Faicey"><b>FAICE</b></a>=<b>Framework for Autonomous and Intelligent Computer Expressions</b>
+<b>the faice of codephreak</b>
 ```python
 # faice.py
 
@@ -542,7 +543,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# newfaice upload to faice
+<b>newfaice upload to faice</b>
 ```python
 # newfaice.py
 
