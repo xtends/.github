@@ -589,7 +589,6 @@ if __name__ == "__main__":
     uploaded_file = st.file_uploader("Upload a custom graphic", type=["jpg", "png", "jpeg"])
     main(uploaded_file)
 ```
-
 <b>transform controls xyz with three.js as a python module</b><br />
 manipulate 3D objects using transform controls, such as translation, rotation, and scaling
 ```python
@@ -617,7 +616,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 
 <b>add transformUIUX.py to your iApp ensure that transformControls.py is in the same folder</b>
 ```python
@@ -638,7 +637,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 <b>drag controls module><b/>
 ```python
 #dragControls.py
@@ -665,7 +664,8 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
+```python
 # dragcontrolsUIUX.py
 
 import streamlit as st
@@ -683,10 +683,10 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 <b>codephreak openGL animation module</b>  
 <b>keyframesAnimation.py</b>
-
+```python
 # keyframesAnimation.py
 
 import streamlit as st
@@ -710,8 +710,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 <b>include keyframes in your phreakUIUX.py include the module in the same folder</b>
+```python
 # phreakUIUX.py
 
 import streamlit as st
@@ -729,11 +730,12 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 
 ################ putting it all together ######################
 <b>module to import a local language model as an app controller</b>
 
+```python
 # localLanguageModels.py
 
 import streamlit as st
@@ -754,9 +756,9 @@ class LocalLanguageModels:
             generated_text = self.generate_text(prompt)
             st.write("Generated Text:")
             st.write(generated_text)
-
+```
 <b>updated codephreakUIUX.py</b>
-
+```python
 # codephreakUIUX.py
 
 import streamlit as st
@@ -795,9 +797,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-<b>codephreakUIUX.py experimental user prompt version to be tested</b>
-
+```
+<b>codephreakUIUX.py experimental user prompt version to be tested NO SECURITY v1</b>
+```python
 # codephreakUIUX.py
 
 import streamlit as st
@@ -845,6 +847,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
 
 
 
