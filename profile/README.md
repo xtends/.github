@@ -1,8 +1,9 @@
 # iApps - from zero to hero<br />
+Intelligent Agents Python Programming FAICE platform
 
 # FAICE
 <b>Framework for Autonomous and Intelligent Computer Expressions</b></br>
-# iApps
+
 <b>Intelligent Agent Python Programming</a></b><br /><br />
 
 <b>Step 1: Environment Setup</b>
