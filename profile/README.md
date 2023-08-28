@@ -240,7 +240,7 @@ Create custom components that allow users to interact contextually with AI model
 Implement robust error handling in your custom components. Display clear error messages and provide users with guidance on how to proceed when unexpected issues arise.<br /><br />
 9. <b>Security Considerations</b><br />
 
-Prioritize <a href="https://en.wikipedia.org/wiki/Open-source_software_security">security</a> when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.<br />
+Prioritize <a href="https://en.wikipedia.org/wiki/Open-source_software_security">security</a> and integrate <a href="https://pypi.org/project/python-dotenv/">external APIs or databases</a> into <a href="https://pypi.org/project/python-dotenv/">Python-dotenv</a> or similar protection mechanisms . Ensure that sensitive data remains protected, and consider implementing <a href="https://pyjwt.readthedocs.io/en/stable/">authentication</a> and <a href="https://oauthlib.readthedocs.io/en/latest/">authorization</a> mechanisms.<br />
 
 # #################################
 # xperimental zone no promises here
