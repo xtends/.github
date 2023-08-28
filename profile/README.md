@@ -431,7 +431,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-<b>security considerations ....... far from complete ... insert necessary libraries yourself</b>
+<b>security considerations skeleton ... customize to your own needs</b>
 ```python
 import streamlit as st
 
