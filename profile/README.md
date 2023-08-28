@@ -849,7 +849,7 @@ if __name__ == "__main__":
     main()
 ```
 
-<b>diving deeper streamlit and react</a>
+<b>integrating streamlit with react</a>
 ```bash
 npx create-react-app my-streamlit-component
 ```
