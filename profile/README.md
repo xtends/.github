@@ -32,8 +32,10 @@ streamlit run newfaice.py
 
 <b>Step 2: Hello World</b>
 
-Create a Streamlit application in a Python file (app.py).
-Import the Streamlit library and define a function to display a welcome message.
+Today I discovered <a href="https://streamlit.io/">Streamlit</a>. Start by creating an application in a Python file (iApp.py). I like to use notepad or gedit. Use whatever editor you like. Streamlit turns data scripts into shareable web apps blazingly fast... and with autonomous deployment well just stand back. You might not never need to read any of these notes.
+All in pure <a href="https://www.python.org/">Python</a>. No front‑end experience required.
+<br />
+example 1: Import the Streamlit library and define a function to display a welcome message.
 
 <b>Step 3: Modular Design</b>
 
