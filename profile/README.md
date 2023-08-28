@@ -220,9 +220,9 @@ Implement robust error handling in your custom components. Display clear error m
 
 Prioritize security when integrating external APIs or databases. Ensure that sensitive data remains protected, and consider implementing authentication and authorization mechanisms.<br />
 
-#################################
-xperimental zone no promises here
-#################################
+# #################################
+# xperimental zone no promises here
+# #################################
 <br />
 ```python
 # sentiment analysis
@@ -277,7 +277,7 @@ if __name__ == "__main__":
     main()
 ```
 # fetch and display data from a database API
-
+```python
 import streamlit as st
 
 class DatabaseComponent:
@@ -300,7 +300,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-# a better codephreak worthy UIUX interface
+# creating a codephreak worthy UIUX interface
 ```python
 import streamlit as st
 
