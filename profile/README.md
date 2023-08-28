@@ -1,4 +1,6 @@
 # iApps - from zero to hero<br />
+# iApps
+<b>Intelligent Agent Python Programming</a>
 # FAICE
 <b>Framework for Autonomous and Intelligent Computer Expressions</b></br>
 
@@ -885,7 +887,7 @@ export default withStreamlitConnection(App);
 npm run build
 ```
 
-<b>create the streamlit</b>
+<b>create the iApp streamlit codephreak.py as example name of iApp</b>
 ```python
 #codephreak.py
 import streamlit as st
