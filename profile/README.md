@@ -2,63 +2,63 @@
 # FAICE<br />
 <b>Framework for Autonomous and Intelligent Computer Expressions</b></br>
 
-Step 1: Environment Setup
+<b>Step 1: Environment Setup</b>
 
-# create a python virtual environment
+<b>create a python virtual environment</b>
 ```bash
 python3 -m venv myenv
 ```
-# activate python virtual environment
+<b>activate python virtual environment</b>
 ```bash
 source myenv/bin/activate
 ```
 
-# Install required packages using pip<br />
+<b>Install required packages using pip</b><br />
 ```bash
 pip install streamlit
 ```
 
-# example run faice iApp
+<b>example run faice iApp</b>
 ```bash
 streamlit run faice.py
 ```
-# example run newfaice iApp
+<b>example run newfaice iApp</b>
 ```bash
 streamlit run newfaice.py
 ```
 
-Step 2: Hello World
+<b>Step 2: Hello World</b>
 
 Create a Streamlit application in a Python file (app.py).
 Import the Streamlit library and define a function to display a welcome message.
 
-Step 3: Modular Design
+<b>Step 3: Modular Design</b>
 
 Create a separate Python file (modules.py) to organize modular code.
 Move the display_hello function to modules.py.
 Import display_hello from modules.py into app.py.
 
-Step 4: UI/UX
+<b>Step 4: UI/UX/<b>
 
 Enhance the UI by adding user input elements like buttons and text inputs.
 Utilize the Streamlit functions to create user-friendly interaction.
 
-Step 5: AI Integration
+<b>Step 5: AI Integration</b>
 
 Integrate a basic machine learning model from your choice of models.
 For instance Use CountVectorizer and Multinomial Naive Bayes classifier to implement the predict_spam function for spam prediction.
 
-Step 6: Language Model Extensions
+<b>Step 6: Language Model Extensions</b>
 
 Utilize the Transformers library to add a text summarization feature.
 Implement the summarize_text function for text summarization from BART
 
-Step 7: Security Best Practices
+<b>Step 7: Security Best Practices</b>
 
 Implement input validation and sanitization using regular expressions.
 Use the sanitize_input function to ensure safe user inputs.
 
-Step 8: Deployment
+<b>Step 8: Deployment</b>
 
 Choose a deployment platform such as AWS, GCP, or DigitalOcean.
 Prepare your code for deployment by creating a requirements.txt file.
@@ -66,16 +66,16 @@ Configure a web server (Nginx or Apache) to handle requests.
 Start the Streamlit app and make it accessible online.
 The following code has been extracted from the official cheatsheet and is posted here to save time on rapid deployment</a><br />
 
-# installation and running
+<b>installation and running</b>
 ```bash
 streamlit run your_script.py
 ```
-# pre-release features
+<b>pre-release features -- ride the lightening</b>
 ```bash
 pip uninstall streamlit
 pip install streamlit-nightly --upgrade
 ```
-# command line
+<b>command line</b>
 ```bash
 streamlit --help
 streamlit run your_script.py
@@ -85,7 +85,7 @@ streamlit cache clear
 streamlit docs
 streamlit --version
 ```
-# display text and markdown
+<b>display text and markdown</b>
 ```python
 st.text('Fixed width text')
 st.markdown('_Markdown_')
@@ -96,20 +96,20 @@ st.header('My header')
 st.subheader('My sub')
 st.code('for i in range(8): foo()')
 ```
-# data display
+<b>data display</b>
 ```python
 st.dataframe(my_dataframe)
 st.table(data.iloc[0:10])
 st.json({'foo':'bar','fu':'ba'})
 st.metric('My metric', 42, 2)
 ```
-# media display
+<b>media display</b>
 ```python
 st.image('./header.png')
 st.audio(data)
 st.video(data)
 ```
-# buttons and controls
+<b>buttons and controls</b>
 ```python
 st.button('Click me')
 st.checkbox('I agree')
