@@ -488,6 +488,76 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+# #########################################################
+# alien DEVzone use with caution everything might be broken
+faice=Framework for Autonomous and Intelligent Computer Expressions
+the faice of codephreak
+# phreakUIUX.py
+
+import streamlit as st
+
+class ThreeJSComponent:
+    def render_threejs_scene(self):
+        """
+        Renders a three.js scene using the provided example link.
+        """
+        st.title("Three.js Integration: Decals Example")
+        st.markdown('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>', unsafe_allow_html=True)
+        st.write('<div id="container"></div>', unsafe_allow_html=True)
+        st.markdown("""
+        <script>
+            // Three.js code for rendering the decals example
+            // You can replace this script with the content from the example link you provided.
+        </script>
+        """, unsafe_allow_html=True)
+
+threejs_viewer = ThreeJSComponent()
+
+def main():
+    threejs_viewer.render_threejs_scene()
+
+if __name__ == "__main__":
+    main()
+
+# newfaice for codephreak
+
+# newfaice.py
+
+import streamlit as st
+
+class ThreeJSComponent:
+    def render_custom_threejs_scene(self, uploaded_file):
+        """
+        Renders a custom three.js scene with an uploaded graphic.
+        Args:
+            uploaded_file: Uploaded graphic file (jpg, png, jpeg).
+        """
+        st.title("Custom Three.js Integration: Upload and Display")
+        st.markdown('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>', unsafe_allow_html=True)
+        st.write('<div id="container"></div>', unsafe_allow_html=True)
+        
+        # Load the uploaded custom graphic
+        if uploaded_file is not None:
+            st.write("Custom Graphic:")
+            st.image(uploaded_file, caption="Uploaded Graphic", use_column_width=True)
+
+        st.markdown("""
+        <script>
+            // Three.js code for rendering the custom scene
+            // You can replace this script with the content for your custom scene.
+        </script>
+        """, unsafe_allow_html=True)
+
+threejs_viewer = ThreeJSComponent()
+
+def main(uploaded_file):
+    threejs_viewer.render_custom_threejs_scene(uploaded_file)
+
+if __name__ == "__main__":
+    uploaded_file = st.file_uploader("Upload a custom graphic", type=["jpg", "png", "jpeg"])
+    main(uploaded_file)
+
+
 
 
 
