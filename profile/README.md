@@ -5,7 +5,7 @@ Intelligent Agents Python Programming FAICE platform
 
 <b>iApps = Intelligent Agent Python Programming System</a></b><br /><br /><br />
 
-VOAICE = Voice Operated Augmented Intelligence Communication Expressions<br />
+<b>VOAICE</b> = Voice Operated Augmented Intelligence Communication Expressions<br />
 
 <b>Step 1: Environment Setup</b><br />
 
